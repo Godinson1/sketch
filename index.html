@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/konva@7.1.3/konva.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Sketch App</title>
+  </head>
+  <body >
+    <div class="pads">
+      <div  class="container">
+        <div class="colors">
+          <div id="red" class="color-one"></div>
+          <div id="blue" class="color-two"></div>
+          <div id="green" class="color-three"></div>
+          <div id="pink" class="color-four"></div>
+          <div id="yellow" class="color-five"></div>
+          <div id="white" class="color-six"></div>
+          <div id="black" class="color-seven"></div>
+          <div id="violet" class="color-eight"></div>
+          <div id="gold" class="color-nine"></div>
+          <div id="indigo" class="color-ten"></div>
+        </div>
+        <div id="container"></div>
+        <div class="functions">
+          <div id="delete" class="actions">
+            <img
+              src="exports/del.png"
+              width="20"
+              height="20"
+             
+            ></object>
+            <span class="tooltip">Clear</span>
+          </div>
+          <div id="mini-brush" class="actions">
+            <img
+              src="exports/one.svg"
+              width="20"
+              height="20"
+              type="image/svg+xml"
+            />
+            <span class="tooltip">Brush 1.0</span>
+          </div>
+          <div id="small-brush" class="actions">
+            <img src="exports/two.svg" width="20" height="20" />
+            <span class="tooltip">Brush 2.0</span>
+          </div>
+          <div id="big-brush" class="actions">
+            <img src="exports/three.svg" width="20" height="20" />
+            <span class="tooltip">Brush 3.0</span>
+          </div>
+          <div id="text" class="actions">
+            <img src="exports/surface1.svg" width="20" height="20" />
+            <span class="tooltip">Text</span>
+          </div>
+          <div id="eraser" class="actions">
+            <img src="exports/surface1erase.svg" width="20" height="20" />
+            <span class="tooltip">Eraser</span>
+          </div>
+          <div id="finish" class="actions">
+            <img src="exports/surface1finish.svg" width="20" height="20" />
+            <span class="tooltip">Finish!</span>
+          </div>
+        </div>
+      </div>
+      <div id="myNav" class="overlay">
+        <div class="overlay-content">
+          <div class="preview-container">
+            <div class="preview">
+              <div id="close-header">
+                <div></div>
+                <div id="close"><span id="close">x</span></div>
+              </div>
+             <div>
+              <h4 class="top">
+                THANKS FOR SHARING YOUR WISHES <br />
+                <span id="click-msg"
+                  >Click the button below to download your image</span
+                >
+              </h4>
+             </div>
+             <div class="img">
+              <img src="" id="prev" alt="preview" />
+             </div>
+             <div>
+              <div id="buttons"><button id="save">Download</button></div>
+              <p id="draw">Draw Again ?  </p>
+             </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <form id="canvas-form" method="POST" action="http://localhost/sketch/img_upload.php" style="display: none">
+      <input id="canvas-input" type="text" name="sketch" placeholder="Paste image url">
+      <input id="canvas-submit" type="submit" name="upload_image" value="Upload">
+    </form> 
+    <script src="index.js"></script>
+  </body>
+</html>
